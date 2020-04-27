@@ -1,0 +1,5 @@
+FORMAT: 1A
+
+# Residents' QR Code APIs
+
+Providing HTTP API for residents' client, allowing them to acquire QR code as their accessing certificate.

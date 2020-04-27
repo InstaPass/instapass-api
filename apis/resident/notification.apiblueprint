@@ -1,0 +1,5 @@
+FORMAT: 1A
+
+# Residents' Notification APIs
+
+Providing HTTP API for residents' client, allowing residents to be informed with latest notifications from their community.

@@ -2,7 +2,7 @@ FORMAT: 1A
 
 # Residents' Profile APIs
 
-Providing HTTP API for residents' client.
+Providing HTTP API for residents' client, related to their personal account profile.
 
 ## Avatar [/avatar]
 
