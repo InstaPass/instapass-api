@@ -1,0 +1,43 @@
+FORMAT: 1A
+
+# Residents' Profile APIs
+
+Providing HTTP API for residents' client.
+
+## Avatar [/avatar]
+
+### get current avatar [GET]
+
++ Response 200 (application/json)
+
+{
+    "status": "ok",
+    "user_name": "随千山",
+    "image_uuid": "56c93dce-8887-11ea-bfef-acde48001122",
+    "size": {
+        "width": 1024,
+        "height": 1024
+    },
+    "format": "png",
+    "size": 38869
+}
+
+### change avatar [POST]
+
++ Request (application/json)
+
+{
+    "image_uuid": "b2395f72-8887-11ea-bfef-acde48001122"
+}
+
++ Response 201 (application/json)
+
+{
+    "status": "ok",
+    "size": {
+        "width": 1024,
+        "height": 1024
+    },
+    "format": "jpg",
+    "size": 57472
+}
