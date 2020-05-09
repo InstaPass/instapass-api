@@ -3,3 +3,43 @@ FORMAT: 1A
 # Guards' Profile APIs
 
 Providing HTTP API for guards' client, related to their personal account profile, job shifting, routinely check-in and so-on.
+
+## Check-in [/guard/checkin]
+
+### check in [POST]
+
++ Request (application/json)
+
+{
+    "community_id": 421,
+    "community": "同德小区",
+    "address": "武汉市江岸区胜利街275号",
+    "longitude": 30.00000,
+    "latitude": 100.00000
+}
+
++ Response (application/json)
+
+{
+    "status": "ok"
+}
+
+## Check-out
+
+### check out [POST]
+
++ Request (application/json)
+
+{
+    "community_id": 421,
+    "community": "同德小区",
+    "address": "武汉市江岸区胜利街275号",
+    "longitude": 30.00000,
+    "latitude": 100.00000
+}
+
++ Response (application/json)
+
+{
+    "status": "ok"
+}

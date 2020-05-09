@@ -3,3 +3,21 @@ FORMAT: 1A
 # Guards' QR Code APIs
 
 Providing HTTP API for guards' client, allowing them authenticate residents' QR code.
+
+## Validate Access [/guide/validate]
+
+### request a submission [POST]
+
++ Request (application/json)
+
+{
+    "secret": "instapass{YzNWcFkybGtZV2x5WlElM0QlM0Q=}",
+    "reason": "压马路"
+}
+
++ Response (application/json)
+
+{
+    "status": "ok",
+    "validation": "accepted"
+}
