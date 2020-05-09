@@ -3,3 +3,26 @@ FORMAT: 1A
 # Residents' Notification APIs
 
 Providing HTTP API for residents' client, allowing residents to be informed with latest notifications from their community.
+
+## Be Notified [/resident/notifications]
+
+### retrieve latest notifications [GET]
+
++ Response 200 (application/json)
+
+{
+    "status": "ok",
+    "last_retrieve_time": 1589014399,
+    "notifications": [
+        {
+            "author": "上海市人民代表大会",
+            "address": "上海市人民大道200号",
+            "content": "blablablablablabla"
+        },
+        {
+            "author": "北京市人民代表大会",
+            "address": "北京市朝阳区建国门南大街6号",
+            "content": "zzzzzzzzzzzzzzzzzzzzzzzzz"
+        }
+    ]
+}

@@ -3,3 +3,15 @@ FORMAT: 1A
 # Residents' QR Code APIs
 
 Providing HTTP API for residents' client, allowing them to acquire QR code as their accessing certificate.
+
+## Obtain QR Code [/resident/qrcode]
+
+### refresh latest qr code [GET]
+
++ Response 200 (application/json)
+
+{
+    "status": "ok",
+    "last_refresh_time": 1589014703,
+    "secret": "YzNWcFkybGtZV2x5WlElM0QlM0Q="
+}
