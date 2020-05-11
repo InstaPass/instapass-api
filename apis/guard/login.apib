@@ -1,0 +1,33 @@
+FORMAT: 1A
+
+# Guards' Login APIs
+
+Providing HTTP API for guards' client, allowing them to login and logout.
+
+## Login [/guard/login]
+
+### perform login [POST]
+
++ Request (application/json)
+
+{
+    "username": "随千山",
+    "password": "asdfghjkl;'"
+}
+
++ Response 200 (application/json)
+
+{
+    "status": "ok",
+    "jwt_token": "imaweirdo"
+}
+
+## Logout [/guard/logout]
+
+### perform logout [POST]
+
++ Response 200
+
+{
+    "status": "ok"
+}
