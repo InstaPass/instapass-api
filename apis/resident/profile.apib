@@ -42,14 +42,18 @@ Providing HTTP API for residents' client, related to their personal account prof
     "size": 57472
 }
 
-## View History [/resident/history]
+## View History [/resident/history/{id}]
+
++ Parameters
+
+    + id: 1 (number) - An unique identifier of the community.
 
 ### retrieve history [GET]
 
 + Response 200 (application/json)
-
 {
     "status": "ok",
+    "current_status": "outside/inside",
     "last_exit_time": 1589012733,
     "history": [
         {

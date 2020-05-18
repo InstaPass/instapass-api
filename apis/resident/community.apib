@@ -1,0 +1,77 @@
+FORMAT: 1A
+
+# Residents' Community APIs
+
+Providing HTTP API for residents' client, allowing them to acquire QR code as their accessing certificate and dealing with community issues.
+
+## Obtain QR Code [/resident/qrcode/{id}]
+
++ Parameters
+
+    + id: 1 (number) - An unique identifier of the community.
+
+### refresh latest qr code [GET]
+
++ Response 200 (application/json)
+
+{
+    "status": "ok",
+    "last_refresh_time": 1589014703,
+    "secret": "instapass{YzNWcFkybGtZV2x5WlElM0QlM0Q=}"
+}
+
+## Obtain Community Info [/resident/community]
+
+### refresh community info [GET]
+
++ Response 200 (application/json)
+
+{
+    "status": "ok",
+    "communities": [
+        {
+            "community_id": 42,
+            "community": "同德小区",
+            "address": "武汉市江岸区胜利街275号"
+        },
+        {
+            "community_id": 43,
+            "community": "其他小区",
+            "address": "武汉市江岸区胜利街244号"
+        }
+    ]
+}
+
+## Request Enter Community [/resident/community/enter]
+
+### request membership of a community [POST]
+
++ Request (application/json)
+
+{
+    "invitation_code": "420312389271893OCISLU"
+}
+
++ Response 200 (application/json)
+
+{
+    "status": "ok",
+    "community_id": 44,
+    "community": "其他小区"
+}
+
+## Request Leave Community [/resident/community/leave]
+
+### give up membership of a community [POST]
+
++ Request (application/json)
+
+{
+    "community_id": 42
+}
+
++ Response 200 (application/json)
+
+{
+    "status": "ok"
+}
