@@ -6,7 +6,14 @@ Providing HTTP API for residents' client, allowing them to acquire QR code as th
 
 ## Obtain QR Code [/resident/qrcode]
 
-### refresh latest qr code [GET]
+### refresh latest qr code [POST]
+
++ Request (application/json)
+
+{
+    "community_id": 42
+}
+
 
 + Response 200 (application/json)
 
@@ -14,4 +21,26 @@ Providing HTTP API for residents' client, allowing them to acquire QR code as th
     "status": "ok",
     "last_refresh_time": 1589014703,
     "secret": "instapass{YzNWcFkybGtZV2x5WlElM0QlM0Q=}"
+}
+
+## Obtain Community Info [/resident/community]
+
+### refresh community info [GET]
+
++ Response 200 (application/json)
+
+{
+    "status": "ok",
+    "communities": [
+        {
+            "community_id": 42,
+            "community": "同德小区",
+            "address": "武汉市江岸区胜利街275号"
+        },
+        {
+            "community_id": 43,
+            "community": "其他小区",
+            "address": "武汉市江岸区胜利街244号"
+        }
+    ]
 }
