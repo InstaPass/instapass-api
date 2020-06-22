@@ -3,3 +3,19 @@ FORMAT: 1A
 # Administrators' statistic APIs
 
 Providing HTTP API for administrators' client, providing them visualized statistics of their managing communities.
+
+## Change In and Out Times(Strategy) [/admin/strategy/change]
+
+### post new strategy [POST]
+
++ Request (application/json)
+
+{
+    "in_and_out": 3
+}
+
++ Response 200 (application/json)
+
+{
+    "status": "ok"
+}

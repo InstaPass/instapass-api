@@ -1,0 +1,35 @@
+FORMAT: 1A
+
+# Admins' Login APIs
+
+Providing HTTP API for admins' client, allowing them to login and logout.
+
+## Login [/admin/login]
+
+### perform login [POST]
+
++ Request (application/json)
+
+{
+    "username": "admin1",
+    "password": "adminpasswd1"
+}
+
++ Response 200 (application/json)
+
+{
+    "status": "ok",
+    "jwt_token": "imaweirdo"
+}
+
+
+
+## Logout [/admin/logout]
+
+### perform logout [POST]
+
++ Response 200
+
+{
+    "status": "ok"
+}
