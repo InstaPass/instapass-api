@@ -122,3 +122,39 @@ Providing HTTP API for residents' client, related to their personal account prof
     "status": "ok",
     "uuid": "56c93dce-8887-11ea-bfef-acde48001122"
 }
+
+## Certification [/resident/certification?uuid={uuid}]
+
++ Parameters
+
+    + uuid: (string) - An unique identifier of this user.
+
+### get current certification [GET]
+
++ Response 200 (application/json)
+
+{
+    "status": "ok",
+    "realname": "随*山",
+    "id_number": "123123123********123123",
+    "id_card_snapshot": "base64_image"
+}
+
+## Certificate [/resident/certificate]
+
+### certificate [POST]
+
++ Request (application/json)
+
+{
+    "id_card_snapshot": "base64_image",
+    "uuid": "56c93dce-8887-11ea-bfef-acde48001122"
+}
+
++ Response 200 (application/json)
+
+{
+    "status": "ok",
+    "realname": "随*山",
+    "id_number": "123123123********123123",
+}
