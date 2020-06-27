@@ -24,18 +24,20 @@ Providing HTTP API for guards' client, allowing them authenticate residents' QR 
 
 ## Generate QR Code [/guard/generate]
 
-### request a qr code
+### request a qr code. reason just needed when temporary is true.
 
 + Request (application/json)
 
 {
     "temporary": false,
-    "user_id": 40
+    "reason": "临时出入",
+    "community_id": 40
 }
 
 + Response (application/json)
 
 {
     "status": "ok",
-    "qr_secret: "instapass{?????????????????????}"
+    "secret": "instapass{?????????????????????}",
+    "last_refresh_time": 1593268115,
 }

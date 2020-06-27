@@ -32,12 +32,16 @@ Providing HTTP API for residents' client, allowing them to acquire QR code as th
         {
             "community_id": 42,
             "community": "同德小区",
-            "address": "武汉市江岸区胜利街275号"
+            "address": "武汉市江岸区胜利街275号",
+            "inside": true,
+            "temporary": true
         },
         {
             "community_id": 43,
             "community": "其他小区",
-            "address": "武汉市江岸区胜利街244号"
+            "address": "武汉市江岸区胜利街244号",
+            "inside": false,
+            "temporary": false
         }
     ]
 }
@@ -49,7 +53,7 @@ Providing HTTP API for residents' client, allowing them to acquire QR code as th
 + Request (application/json)
 
 {
-    "secret_key": "instapass{bac2933c-b859-11ea-ac14-acde48001122}"
+    "secret": "instapass{bac2933c-b859-11ea-ac14-acde48001122}"
 }
 
 + Response 200 (application/json)
