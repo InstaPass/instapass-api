@@ -49,13 +49,14 @@ Providing HTTP API for residents' client, allowing them to acquire QR code as th
 + Request (application/json)
 
 {
-    "invitation_code": "420312389271893OCISLU"
+    "secret_key": "instapass{bac2933c-b859-11ea-ac14-acde48001122}"
 }
 
 + Response 200 (application/json)
 
 {
     "status": "ok",
+    "temporary": true,
     "community_id": 44,
     "community": "其他小区"
 }

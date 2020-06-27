@@ -4,7 +4,7 @@ FORMAT: 1A
 
 Providing HTTP API for guards' client, allowing them authenticate residents' QR code.
 
-## Validate Access [/guide/validate]
+## Validate Access [/guard/validate]
 
 ### request a submission [POST]
 
@@ -20,4 +20,22 @@ Providing HTTP API for guards' client, allowing them authenticate residents' QR 
 {
     "status": "ok",
     "validation": "accepted"
+}
+
+## Generate QR Code [/guard/generate]
+
+### request a qr code
+
++ Request (application/json)
+
+{
+    "temporary": false,
+    "user_id": 40
+}
+
++ Response (application/json)
+
+{
+    "status": "ok",
+    "qr_secret: "instapass{?????????????????????}"
 }
