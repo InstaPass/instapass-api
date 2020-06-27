@@ -123,11 +123,11 @@ Providing HTTP API for residents' client, related to their personal account prof
     "uuid": "56c93dce-8887-11ea-bfef-acde48001122"
 }
 
-## Certification [/resident/certification?uuid={uuid}]
+## Certification [/resident/certification?id_number={id_number}]
 
 + Parameters
 
-    + uuid: (string) - An unique identifier of this user.
+    + id_number: (string) - The number of this user's ID card.
 
 ### get current certification [GET]
 
@@ -148,7 +148,6 @@ Providing HTTP API for residents' client, related to their personal account prof
 
 {
     "id_card_snapshot": "base64_image",
-    "uuid": "56c93dce-8887-11ea-bfef-acde48001122"
 }
 
 + Response 200 (application/json)
