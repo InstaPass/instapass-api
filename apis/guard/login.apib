@@ -20,11 +20,18 @@ Providing HTTP API for guards' client, allowing them to login and logout.
 {
     "status": "ok",
     "jwt_token": "imaweirdo",
-    "working_community": {
-        "community_id": 42,
-        "community": "同德小区",
-        "address": "武汉市江岸区胜利街275号"
-    } 
+    "working_communities":[
+        {
+            "community_id": 42,
+            "community": "同德小区",
+            "address": "武汉市江岸区胜利街275号",
+        },
+        {
+            "community_id": 43,
+            "community": "其他小区",
+            "address": "武汉市江岸区胜利街244号",
+        }
+    ] 
 }
 
 ## Logout [/guard/logout]
