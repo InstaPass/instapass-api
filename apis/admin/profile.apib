@@ -4,7 +4,11 @@ FORMAT: 1A
 
 Providing HTTP API for administrators' client, related to their personal account profile.
 
-## Retrieve Residents' Informations [/admin/infos]
+## Retrieve Residents' Informations [/admin/infos/{id}]
+
++ Parameters
+
+    + id: 1 (number) - An unique identifier of the community.
 
 ### retrieve info [GET]
 
@@ -62,41 +66,75 @@ Providing HTTP API for administrators' client, related to their personal account
 
 
 
-## View Residents' History [/admin/history]
+## View Residents' History [/admin/history/{id}]
+
++ Parameters
+
+    + id: 421 (number) - An unique identifier of the community.
 
 ### retrieve history [GET]
 
 + Response 200 (application/json)
 {
     "status": "ok",
-    "current_status": "outside/inside",
-    "last_exit_time": 1589012733,
-    "history": [
+    "residents": [
         {
-            "realname": "随*山",
-            "id_number": "123123123********123123",
-            "nickname": "昵称",
-            "phone_no": "13912345678",
-            "mail_address": "akaza_akari@outlook.com",
-
-            "community_id": 421,
-            "community": "同德小区",
-            "address": "武汉市江岸区胜利街275号",
-            "time": 1589012733,
-            "reason": "治病"
+            "variable_info": {
+                "nickname": "昵称",
+                "phone_no": "13912345678",
+                "mail_address": "akaza_akari@outlook.com"
+            },
+            "static_info": {
+                "realname": "随*山",
+                "id_number": "123123123********123123"
+            },
+            "current_status": "outside/inside",
+            "last_exit_time": 1589012733,
+            "history": [
+                {
+                    "community_id": 421,
+                    "community": "同德小区",
+                    "address": "武汉市江岸区胜利街275号",
+                    "time": 1589012733,
+                    "reason": "治病"
+                },
+                {
+                    "community_id": 421,
+                    "community": "同德小区",
+                    "address": "武汉市江岸区胜利街275号",
+                    "time": 158901127,
+                    "reason": "买菜"
+                }
+            ]
         },
         {
-            "realname": "杨*过",
-            "id_number": "123123123********123123",
-            "nickname": "昵称",
-            "phone_no": "15225255151",
-            "mail_address": "aydd_ddya@outlook.com",
-            
-            "community_id": 421,
-            "community": "同德小区",
-            "address": "武汉市江岸区胜利街275号",
-            "time": 158901127,
-            "reason": "买菜"
+            "variable_info": {
+                "nickname": "昵称",
+                "phone_no": "15221215151",
+                "mail_address": "dday_aydd@outlook.com"
+            },
+            "static_info": {
+                "realname": "杨*过",
+                "id_number": "123123123********123123"
+            },
+            "current_status": "outside/inside",
+            "last_exit_time": 1589012733,
+            "history": [
+                {
+                    "community_id": 421,
+                    "community": "同德小区",
+                    "address": "武汉市江岸区胜利街275号",
+                    "time": 1589012733,
+                    "reason": "治病"
+                },
+                {
+                    "community_id": 421,
+                    "community": "同德小区",
+                    "address": "武汉市江岸区胜利街275号",
+                    "time": 158901127,
+                    "reason": "买菜"
+                }
+            ]
         }
     ]
 }
