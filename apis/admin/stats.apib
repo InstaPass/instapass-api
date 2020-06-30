@@ -4,14 +4,37 @@ FORMAT: 1A
 
 Providing HTTP API for administrators' client, providing them visualized statistics of their managing communities.
 
-## Change In and Out Times(Strategy) [/admin/strategy/change]
+## Change In and Out Times(Strategy) [/admin/strategy]
+
+### get now strategies [GET]
+
++ Response 200 (application/json)
+
+{
+    "status": "ok",
+    "strategies": [
+        {
+            "community_id": 1,
+            "cool_down": 86400,
+        },
+        {
+            "community_id": 2,
+            "cool_down": 0,
+        },
+        {
+            "community_id": 3,
+            "cool_down": -1
+        }
+    ]
+}
 
 ### post new strategy [POST]
 
 + Request (application/json)
 
 {
-    "in_and_out": 3
+    "community_id": 1,
+    "cool_down": 86400  // seconds, 0 means no limit, -1 means blocking goes out
 }
 
 + Response 200 (application/json)
